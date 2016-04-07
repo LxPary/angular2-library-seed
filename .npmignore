@@ -40,6 +40,8 @@ test
 Thumbs.db
 .DS_Store
 *.yml
+*.ts
+!*.d.ts
 src/app/app.*
 src/public
 src/shims
