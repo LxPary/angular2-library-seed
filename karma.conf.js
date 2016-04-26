@@ -13,8 +13,11 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      {pattern: './karma-shim.js', watched: false},
-      {pattern: './src/app/**/*.spec.ts', watched: true, included: false}
+      {pattern: 'node_modules/es6-shim/es6-shim.js', included: true, watched: false},
+      { pattern: 'node_modules/angular2/bundles/angular2-polyfills.js', included: true, watched: false },
+      { pattern: 'node_modules/zone.js/dist/async-test.js', included: true, watched: false },
+      { pattern: 'node_modules/zone.js/dist/fake-async-test.js', included: true, watched: false },
+      {pattern: './karma-shim.js', watched: false}
     ],
 
     // list of files to exclude
