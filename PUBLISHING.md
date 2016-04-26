@@ -21,10 +21,7 @@ Temporarily replace `package.json` contents with:
 {
   "name": "ng2-your-library",
   "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {
-    "prepublish": "tsc && node make.js"
-  }
+  "license": "MIT"
 }
 ```
 
@@ -56,10 +53,10 @@ Temporarily replace `tsconfig.json` contents with:
 ## Test Publish
 
 ```
-npm run prepublish
+tsc
 ```
 
-Verify that `*.js` files and a `*.d.ts` declaration file was created for `your-library` in the root. 
+Verify that `*.js` files and a `*.d.ts` declaration file was created for `ng2-your-library` in the root. 
 
 If everything compiled properly with no errors and you **feel very confident that everything is ready to go**, then publish to npm:
 
