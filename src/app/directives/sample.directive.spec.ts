@@ -2,7 +2,8 @@ import {
   it,
   describe,
   expect,
-  injectAsync,
+  async,
+  inject,
   TestComponentBuilder,
   beforeEach,
   beforeEachProviders
@@ -13,24 +14,24 @@ import {SampleDirective} from './sample.directive';
 
 describe('SampleDirective', () => {
   let fixture;
-  
+
   //setup
   beforeEachProviders(() => [
     TestComponentBuilder
   ]);
 
-  beforeEach(injectAsync([TestComponentBuilder], tcb => {
-    return tcb
+  beforeEach(async(inject([TestComponentBuilder], tcb => {
+    tcb
       .createAsync(TestComponent)
       .then(f => fixture = f);
-  }));
+  })));
 
   it('should add a class', () => {
+    fixture.detectChanges();
     let container = fixture.componentInstance,
       div = fixture.nativeElement.querySelector('div');
     expect(div.getAttribute('class')).toBe('sample-class');
   });
-
 });
 
 @Component({
@@ -40,4 +41,4 @@ describe('SampleDirective', () => {
   <div sample></div>
   `
 })
-class TestComponent {}
+class TestComponent { }

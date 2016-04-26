@@ -2,6 +2,7 @@ import {
   it,
   describe,
   expect,
+  async,
   inject,
   beforeEach,
   beforeEachProviders
@@ -16,9 +17,9 @@ describe('Pipe: SamplePipe', () => {
     SamplePipe
   ]);
   
-  beforeEach(inject([SamplePipe], p => {
+  beforeEach(async(inject([SamplePipe], p => {
     pipe = p;
-  }));
+  })));
   
   //specs
   it('should make a comment', () => {

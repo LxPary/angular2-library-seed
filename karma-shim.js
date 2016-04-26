@@ -1,7 +1,8 @@
 Error.stackTraceLimit = Infinity;
 require('es6-shim');
 require('angular2/bundles/angular2-polyfills.js');
-require('angular2/testing');
+require('zone.js/dist/async-test.js');
+require('zone.js/dist/fake-async-test.js');
 
 /*
  Ok, this is kinda crazy. We can use the the context method on
