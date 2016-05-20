@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 import '../style/app.scss';
 
@@ -15,10 +15,10 @@ import {SampleService} from './services/sample.service';
   providers: [SampleService],
   directives: [SampleComponent, SampleDirective],
   pipes: [SamplePipe],
-  styles: [require('./app.scss')],
-  template: require('./app.html')
+  styles: [require('./app.component.scss')],
+  template: require('./app.component.html')
 })
-export class App {
+export class AppComponent {
   pipeTest: string = 'Create an amazing community by contributing a library';
   url: string = 'https://github.com/preboot/angular2-library-seed';
 

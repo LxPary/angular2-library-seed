@@ -13,10 +13,6 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      {pattern: 'node_modules/es6-shim/es6-shim.js', included: true, watched: false},
-      { pattern: 'node_modules/angular2/bundles/angular2-polyfills.js', included: true, watched: false },
-      { pattern: 'node_modules/zone.js/dist/async-test.js', included: true, watched: false },
-      { pattern: 'node_modules/zone.js/dist/fake-async-test.js', included: true, watched: false },
       {pattern: './karma-shim.js', watched: false}
     ],
 
@@ -50,7 +46,7 @@ module.exports = function (config) {
     },
 
     // test results reporter to use
-    // possible values: 'dots', 'progress'
+    // possible values: 'dots', 'progress', 'mocha'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ['mocha', 'coverage'],
 

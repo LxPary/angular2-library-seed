@@ -6,7 +6,7 @@ import {
   inject,
   beforeEach,
   beforeEachProviders
-} from 'angular2/testing';
+} from '@angular/core/testing';
 import {SamplePipe} from './sample.pipe';
 
 describe('Pipe: SamplePipe', () => {

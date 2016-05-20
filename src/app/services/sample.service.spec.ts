@@ -5,7 +5,7 @@ import {
   async,
   inject,
   beforeEachProviders
-} from 'angular2/testing';
+} from '@angular/core/testing';
 import {SampleService} from './sample.service';
 
 describe('SampleService', () => {

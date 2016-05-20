@@ -5,13 +5,12 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "moduleResolution": "node"
+    "noEmitHelpers": true
   },
-  "files": [
-    "typings/browser.d.ts",
-    "ng2-your-library.ts",
-    "src/bootstrap.ts",
-    "src/vendor.ts"
+  "exclude": [
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
   ],
   "compileOnSave": false,
   "buildOnSave": false
